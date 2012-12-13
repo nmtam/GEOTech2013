@@ -192,6 +192,7 @@
 }
 .fe .other_news.jsp{padding:2px 5px 0 2px}
 .fe .other_news li{padding:0 0 10px 0; position:relative;}
+.fe .other_news li:last-child{padding:0}
 .fe .other_news li a{
 	display:block; padding:0 0 0 20px;
 	font-size:18px; color:#ffe3b8;
@@ -212,3 +213,43 @@
 	line-height:30px; text-align:center;
 }
 /* end of news */
+
+
+/* important dates */
+.fe .imp_date_container{
+	margin:25px 0 0 0;
+}
+.fe .imp_date_container .items{
+	float:left; width:50%; margin:0 0 10px 0;
+	height:80px;
+}
+.fe .imp_date_container .calendar {
+	float:left; width:80px; height:80px;
+	background-color:#fff;
+	margin:0 16px 0 0; position:relative;
+	-webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+.fe .imp_date_container .calendar span{
+	font-size:55px; font-weight:bold; color:#c3996b;
+	position:absolute; width:80px; text-align:center;
+	z-index:2; top:-4px; left:0;
+	letter-spacing:-4px;
+}
+.fe .imp_date_container .calendar .second{
+	font-size:25px;
+	bottom:5px; top:auto;
+	letter-spacing:-1px;
+}
+.fe .imp_date_container .calendar .second.long{
+	font-size:13px;
+	bottom:12px;
+}
+.fe .imp_date_container .info {
+	font-size:18px; line-height:18px; color:#fff;
+	margin:15px 0 0 0;
+}
+.fe .imp_date_container .info h3{
+	font-size:24px; margin-bottom:4px;
+}
+/* end of important dates */
