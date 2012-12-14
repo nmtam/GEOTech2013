@@ -2,8 +2,19 @@ $(document).ready(function(){
 	
 	initFullpageBackground();
 	initJSPanel();
+	initMap();
 });
 
+function initMap(){
+	$('#map').hover(
+		function(){
+			$('a', this).show();
+		},
+		function(){
+			$('a', this).hide();
+		}
+	);
+}
 
 function initJSPanel(){
 	var jsp = $('.jsp');
@@ -13,14 +24,6 @@ function initJSPanel(){
 			verticalDragMaxHeight: 150,
 			verticalGutter: 0
 		});
-		/*
-		setTimeout(function(){
-			var _o = $('.jspTrack');
-			var n_h = _o.height() - 4;
-			_o.height(n_h);
-			$('.jspVerticalBar').css('margin','2px 0');
-		}, 200);
-		*/
 	}
 }
 

@@ -253,3 +253,39 @@
 	font-size:24px; margin-bottom:4px;
 }
 /* end of important dates */
+
+
+/* Venue */
+.fe .sub_page_title{
+	margin:0 0 0 20px;
+	font-size:12px; color:#fff;
+}
+.fe .sub_page_title span{
+	display:block; margin:7px 0 6px 0;
+	width:193px; height:26px;
+	background:url(imgs/sprite.png) no-repeat -663px -174px;
+}
+.fe #map{
+	position:relative;
+	margin:25px 0 0 0;
+}
+.fe #map a{
+	display:none; width:450px; height:352px; padding:0; margin:0;
+	position:absolute; z-index:2; top:0; left:0;
+	font-size:24px; color:#2b388f;
+	line-height:352px;
+	background:url(imgs/pink_90.png);
+	padding-left:305px;
+	
+	border:5px solid #fff;
+	-webkit-border-radius: 5px;
+    border-radius: 5px;
+	-webkit-box-shadow:  0px 1px 1px 1px #d0936a;	
+	box-shadow:  0px 1px 1px 1px #d0936a;
+}
+.fe #map a span{
+	position:absolute; top:145px; left:245px;
+	width:51px; height:62px; z-index:3;
+	background:url(imgs/sprite.png) no-repeat -805px 0;
+}
+/* end of Venue */
