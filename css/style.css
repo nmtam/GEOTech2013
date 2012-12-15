@@ -12,10 +12,19 @@
 	width:940px; margin:0 auto;
 	position:relative;
 }
+.fe #hp_slideshow{
+	width:765px;
+	height:485px;
+	overflow:hidden;
+}
+.fe #hp_slideshow .main_content{
+	position:absolute; left:765px;
+}
 
 /* top_navigator */
 .fe #top_navigator{
 	padding:25px 0 0 0;
+	margin-bottom:10px;
 }
 .fe #top_navigator .online_register,
 .fe #top_navigator ul,
@@ -42,10 +51,10 @@
 /* end of top_navigator */
 
 /* main_content */
-.fe #main_content{
-	width:765px; overflow:hidden;
+.fe .main_content{
+	width:765px; height:470px; overflow:hidden;
 	position:relative;
-	margin:25px 0 0 0;
+	margin:15px 0 0 0;
 }
 .fe .w_277{width:277px;}
 .fe .w_214{width:214px;}
@@ -155,10 +164,30 @@
 #site_footer a{margin:0 15px 0 0;}
 #site_footer #support a{margin:0 0 0 15px;}
 #site_footer #support .logo a:first-child{margin:0;}
+
+#site_footer #copyright{
+	position:absolute; top:-30px; left:0;
+	font:10px Arial, Helvetica, sans-serif; color:#ffe3b8;
+	text-transform:uppercase;
+}
+#site_footer #copyright a{margin:0; color:#ffe3b8;}
+#site_footer #copyright a:hover{color:#0558A9;}
+#site_footer #show_more_info {
+	font-size:11px; font-weight:bold; text-transform:uppercase;
+	color:#2b388f;
+	position:absolute; top:-40px; right:0;
+	height:31px; line-height:31px; padding:0 20px; margin:0;
+	background-color:#ffe3b8;
+	display:none;
+	
+	-webkit-border-radius: 4px 4px 0px 0px;
+	border-radius: 4px 4px 0px 0px;
+
+}
 /* end of footer */
 
 /* news */
-.fe #main_content .page_title {
+.fe .main_content .page_title {
 	font-size:72px; line-height:55px; letter-spacing:-5px;
 	color:#fff;
 	text-transform:uppercase;
@@ -189,7 +218,7 @@
 
 .fe #latest_news{
 	font-size:14px; color:#363636;
-	float:left; width:370px; margin:26px 0 0 0; padding:0 0 15px 0;
+	width:370px; margin:26px 0 0 0; padding:0 0 15px 0;
 	background-color:#ffe3b8; border:5px solid #fff;
 	-webkit-border-radius: 5px;
     border-radius: 5px;
@@ -289,7 +318,7 @@
 	margin:25px 0 0 0;
 }
 .fe #map a{
-	display:none; width:450px; height:350px; padding:0; margin:0;
+	display:none; width:450px; height:348px; padding:0; margin:0;
 	position:absolute; z-index:2; top:0; left:0;
 	font-size:24px; color:#2b388f;
 	line-height:352px;

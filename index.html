@@ -10,12 +10,13 @@
     
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="js/modalbox/css/jquery.modalbox.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.css" />
     
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body class="fe">
-	<div id="fullpage_image_holder"><img src="userfiles/bg_full.png" class="main_image" /></div>
+	<div id="fullpage_image_holder"><img src="userfiles/bg_full.png" class="main_image" data-default='1' /></div>
     
     <div id="site_wrapper">
 	    <nav id="top_navigator" class="clearfix">
@@ -30,42 +31,163 @@
             </ul>
         </nav>
         
-        <div id="main_content">
-            <h1 id="site_title" class="font_ubuntu">
-            	<span>International conference on</span> 
-                <strong>GEOTECHNICS for</strong> 
-                <strong>sustainable development</strong>
-            </h1>
-            <nav id="main_article">
-                <ul class="font_ubuntu">
-                    <li>
-                    	<a href="#" class="openmodalbox w_277">Welcome Message<input type="hidden" name="ajaxhref" value="_popup/welcome_message.html" /></a>
-                    </li>
-                    <li>
-                    	<a href="#" class="openmodalbox w_214">Call for Paper<input type="hidden" name="ajaxhref" value="_popup/call_for_paper.html" /></a>
-                    </li>
-                    <li>
-                    	<a href="#" class="openmodalbox w_243">Keynote Lecture<input type="hidden" name="ajaxhref" value="_popup/keynote.html" /></a>
-                    </li>
-                    <li>
-                    	<a href="#" class="openmodalbox w_316">Conference Program<input type="hidden" name="ajaxhref" value="_popup/program.html" /></a>
-                    </li>
-                    <li>
-                    	<a href="#" class="openmodalbox w_374">Conference Committee<input type="hidden" name="ajaxhref" value="_popup/committee.html" /></a>
-                    </li>
+        <div id="hp_slideshow">
+            <div class="main_content" style="left:0">
+                <h1 id="site_title" class="font_ubuntu">
+                    <span>International conference on</span> 
+                    <strong>GEOTECHNICS for</strong> 
+                    <strong>sustainable development</strong>            </h1>
+                <nav id="main_article">
+                    <ul class="font_ubuntu">
+                        <li>
+                            <a href="#" class="openmodalbox w_277">Welcome Message<input type="hidden" name="ajaxhref" value="_popup/welcome_message.html" /></a>                    </li>
+                        <li>
+                            <a href="#" class="openmodalbox w_214">Call for Paper<input type="hidden" name="ajaxhref" value="_popup/call_for_paper.html" /></a>                    </li>
+                        <li>
+                            <a href="#" class="openmodalbox w_243">Keynote Lecture<input type="hidden" name="ajaxhref" value="_popup/keynote.html" /></a>                    </li>
+                        <li>
+                            <a href="#" class="openmodalbox w_316">Conference Program<input type="hidden" name="ajaxhref" value="_popup/program.html" /></a>                    </li>
+                        <li>
+                            <a href="#" class="openmodalbox w_374">Conference Committee<input type="hidden" name="ajaxhref" value="_popup/committee.html" /></a>                    </li>
+                    </ul>
+                </nav>        
+            </div>
+            
+            <div class="main_content">
+                <h1 class="page_title font_ubuntu">News</h1>
+                <ul class="follow_us">
+                    <li class="facebook"><a href="#" class="hide_content" title="Follow us on Facebook">Facebook</a></li>
+                    <li class="twitter"><a href="#" class="hide_content" title="Follow us on Twitter">Twitter</a></li>
+                    <li class="youtube"><a href="#" class="hide_content" title="Follow us on Youtube">Youtube</a></li>
                 </ul>
-            </nav>        
+                
+                <div class="jsp other_news">
+                    <ul class="font_ubuntu">
+                        <li><a href="#">Nunc dignissim risus id metus</a><span>New</span></li>
+                        <li><a href="#">Vestibulum commodo felis quis tortor</a><span>New</span></li>
+                        <li><a href="#">Vivamus molestie gravida turpis</a></li>
+                        <li><a href="#">Nam convallis pellentesque nisl</a></li>
+                        <li><a href="#">Integer malesuada commodo nulla</a></li>
+                        <li><a href="#">Vivamus molestie gravida turpis</a></li>
+                        <li><a href="#">Nam convallis pellentesque nisl</a></li>
+                        <li><a href="#">Integer malesuada commodo nulla</a></li>
+                    </ul>
+                </div> 
+                
+                <article id="latest_news">
+                    <img src="userfiles/news.jpg" alt="" width="100%" />
+                    <h2><a href="#">Lorem ipsum dolor sit amet, consectetueradipiscing elit</a></h2>
+                    <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus...</p>
+                </article>
+                
+                
+            </div>
+            
+            <div class="main_content">
+                <h1 class="page_title font_ubuntu">Important dates</h1>
+                
+                <div class="imp_date_container clearfix">
+                    <div class="items">
+                        <div class="calendar font_ubuntu">
+                            <span>15</span>
+                            <span class="second">DEC</span>
+                        </div>
+                        <div class="info">
+                            <h3 class="font_ubuntu">December 15, 2012</h3>
+                            Start submission of abstracts
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="calendar font_ubuntu">
+                            <span>15</span>
+                            <span class="second">SEP</span>
+                        </div>
+                        <div class="info">
+                            <h3 class="font_ubuntu">December 15, 2012</h3>
+                            Deadline for submitting final papers
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="calendar font_ubuntu">
+                            <span>15</span>
+                            <span class="second">MAR</span>
+                        </div>
+                        <div class="info">
+                            <h3 class="font_ubuntu">December 15, 2012</h3>
+                            Deadline for submitting abstracts
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="calendar font_ubuntu">
+                            <span>15</span>
+                            <span class="second long">JAN-MAY</span>
+                        </div>
+                        <div class="info">
+                            <h3 class="font_ubuntu">December 15, 2012</h3>
+                            Early registration
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="calendar font_ubuntu">
+                            <span>1</span>
+                            <span class="second">MAY</span>
+                        </div>
+                        <div class="info">
+                            <h3 class="font_ubuntu">December 15, 2012</h3>
+                            Deadline for submitting(accepted) paper manuscripts
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="calendar font_ubuntu">
+                            <span>15</span>
+                            <span class="second long">JAN-MAY</span>
+                        </div>
+                        <div class="info">
+                            <h3 class="font_ubuntu">December 15, 2012</h3>
+                            Early registration
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="calendar font_ubuntu">
+                            <span>1</span>
+                            <span class="second">MAY</span>
+                        </div>
+                        <div class="info">
+                            <h3 class="font_ubuntu">December 15, 2012</h3>
+                            Deadline for submitting(accepted) paper manuscripts
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="main_content">
+                <section class="clearfix">
+                    <h1 class="page_title font_ubuntu fll">Venue</h1>
+                    <div class="fll sub_page_title font_ubuntu">
+                        <a href="http://www.meliahanoi.com/en/index.html" target="_blank"></a>
+                        44B Ly Thuong Kiet Street, Hanoi, Vietnam
+                    </div>            
+                </section>
+                
+                <div id="map">
+                    <img src="userfiles/map-grayscale.png" alt="">
+                    <a href="http://goo.gl/gugn7" target="_blank" class="font_ubuntu"><span></span>View on Google Map</a>
+                </div>
+            </div>
         </div>
         
+        
+        
         <section id="right_col">
-        	<a href="#" id="logo" class="hide_content">GEOTech 28-29/11/2013 - Hanoi - Vietnam</a>
+        	<a href="/" id="logo" class="hide_content">GEOTech 28-29/11/2013 - Hanoi - Vietnam</a>
             
             <nav id="right_nav">
             	<ul class="font_ubuntu">
-                	<li class="main_menu active"><span></span><a href="#">Main Menu</a></li>
-                    <li class="news"><span></span><a href="#">News</a></li>
-                    <li class="imp_date"><span></span><a href="#">Important dates</a></li>
-                    <li class="venue"><span></span><a href="#">Venue</a></li>
+                	<li class="main_menu active" data-index="0"><span></span><a href="#">Main Menu</a></li>
+                    <li class="news" data-index="1"><span></span><a href="#" >News</a></li>
+                    <li class="imp_date" data-index="2"><span></span><a href="#">Important dates</a></li>
+                    <li class="venue" data-index="3" data-bg="userfiles/bg_full_map.png"><span></span><a href="#">Venue</a></li>
                 </ul>
             </nav>
         </section>
@@ -88,13 +210,24 @@
                 <a href="#"><img src="userfiles/logo/ccci.png" /></a>
                 <a href="#"><img src="userfiles/logo/logo1.png" /></a>
                 <a href="#"><img src="userfiles/logo/vcgroup.png" /></a>
-                <a href="#"><img src="userfiles/logo/logo2.png" /></a>            </section>
+                <a href="#"><img src="userfiles/logo/logo2.png" /></a>
+            </section>
+            
+            <section id="copyright"><a href="#">TIẾNG VIỆT</a> | FECON &copy; 2012 - Designed by <a href="http://duknguyen.com/" target="_blank">Duknguyen Team</a></section>
+            <a href="#" id="show_more_info" class="font_ubuntu">Show more info</a>
         </div>
-</footer>
+    </footer>
     
     
     <script src="js/jquery.js"></script>
-    <script src="js/modalbox/js/jquery.modalbox-1.4.1-min.js"></script>
+    
+	<script src="js/modalbox/js/jquery.modalbox-1.4.1-min.js"></script>
+    
+	<script src="js/jquery.cycle.all.js"></script>
+    
+	<script src="js/jquery.mousewheel.js"></script>
+    <script src="js/jquery.jscrollpane.min.js"></script>
+    
     <script src="js/utils.js"></script>
 </body>
 </html>

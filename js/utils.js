@@ -1,11 +1,73 @@
+var hp_slide_speed = 250;
 $(document).ready(function(){
 	
 	initFullpageBackground();
 	initJSPanel();
 	initMap();
 	initModalbox();
+	
+	initHPSlide();
+	
 });
 
+function initHPSlide(){
+	var hp_slide = $('#hp_slideshow');
+	if (hp_slide.length == 1) {
+		hp_slide.cycle({
+			fx: 'scrollVert',
+            timeout: 0,
+			speed: hp_slide_speed
+		});
+		
+		$('#right_nav li').click(function(e){
+			var _o = $(this);
+			
+			// change background if any
+			var background = _o.attr('data-bg');
+			if (background) {
+				var img = $('<img src="'+background+'" class="main_image" />');
+				$(img).load(function() {
+					$('#fullpage_image_holder .main_image').hide();
+					$('#fullpage_image_holder').append(img);
+				});
+			} else {
+				$('#fullpage_image_holder .main_image').hide();
+				$('#fullpage_image_holder .main_image[data-default="1"]').show();
+			}
+			
+			// cycle to requested page
+			var index = parseInt(_o.attr('data-index'));
+			hp_slide.cycle(index);
+			
+			$('#right_nav li').removeClass('active');
+			_o.addClass('active');
+			
+			// show/hide footer
+			if (index > 0) { 
+				// hide footer
+				$('#site_footer').animate({
+					'bottom': '-100px'
+				}, 200);
+				// show show_more_info button
+				$('#show_more_info').fadeIn();
+			} else {
+				$('#show_more_info').fadeOut('fast');
+				
+				$('#site_footer').animate({
+					'bottom': '0'
+				}, 200);
+			}
+			
+			// init #show_more_info click
+			$('#show_more_info').click(function(){
+				$(this).fadeOut('fast');
+				$('#site_footer').animate({
+					'bottom': '0'
+				}, 200);
+			});
+		});
+	}
+}
 
 function initMap(){
 	$('#map').hover(
@@ -19,7 +81,9 @@ function initMap(){
 }
 
 function initModalbox(){
-	jQuery(".openmodalbox").modalBox({
+	var openmodalbox = $('.openmodalbox');
+	if (openmodalbox.length > 0) 
+	openmodalbox.modalBox({
 		setStylesOfFadingLayer:  {black : 'background-color:#000; filter:alpha(opacity=80); -moz-opacity:0.8; opacity:0.8;'},
 		setWidthOfModalLayer : 680,
 		minimalTopSpacing : -8,
