@@ -44,6 +44,7 @@ div#modalBoxAjaxLoader {
 	padding:120px 100px 80px 100px; 
 	text-align:center; 
 	overflow:hidden;
+	color:#c3996b;
 }
 div#modalBox {
 	display:none; 

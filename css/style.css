@@ -11,14 +11,17 @@
 .fe #site_wrapper{
 	width:940px; margin:0 auto;
 	position:relative;
+	background:none;
 }
 .fe #hp_slideshow{
 	width:765px;
 	height:485px;
 	overflow:hidden;
+	background:none;
 }
 .fe #hp_slideshow .main_content{
 	position:absolute; left:765px;
+	background:none;
 }
 
 /* top_navigator */
@@ -294,7 +297,7 @@
 	bottom:12px;
 }
 .fe .imp_date_container .info {
-	font-size:18px; line-height:18px; color:#fff;
+	font-size:16px; line-height:16px; color:#fff;
 	margin:15px 0 0 0;
 }
 .fe .imp_date_container .info h3{
@@ -318,7 +321,7 @@
 	margin:25px 0 0 0;
 }
 .fe #map a{
-	display:none; width:450px; height:348px; padding:0; margin:0;
+	display:none; width:450px; height:350px; padding:0; margin:0;
 	position:absolute; z-index:2; top:0; left:0;
 	font-size:24px; color:#2b388f;
 	line-height:352px;
@@ -328,8 +331,6 @@
 	border:5px solid #fff;
 	-webkit-border-radius: 5px;
     border-radius: 5px;
-	-webkit-box-shadow:  0px 1px 1px 1px #d0936a;	
-	box-shadow:  0px 1px 1px 1px #d0936a;
 }
 .fe #map a span{
 	position:absolute; top:145px; left:245px;
@@ -345,9 +346,8 @@
     border-radius: 5px;
 }
 .fe .popup_title{
-	width:575px; height:66px;
+	width:620px; height:65px; padding:82px 0 0 100px;
 	background:url(imgs/sprite.png) no-repeat 0 -174px;
-	padding:82px 0 0 45px;
 	font-size:48px; color:#fff;
 }
 .fe .popup_title span{
@@ -355,10 +355,11 @@
 	filter: dropshadow(color=#000101, offx=0, offy=1);
 }
 .fe .popup_content{
-	padding:20px 50px 40px 50px;
+	padding:20px 90px 40px 100px;
+	color:#363636;
 }
 .fe .popup_content h3{
-	font:bold 22px "Times New Roman";
+	font:bold 22px "Times New Roman"; line-height:18px;
 	padding:0; margin:8px 0 0 0;
 }
 .fe .popup_content ol{

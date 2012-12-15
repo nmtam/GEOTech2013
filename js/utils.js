@@ -16,14 +16,17 @@ function initHPSlide(){
 		hp_slide.cycle({
 			fx: 'scrollVert',
             timeout: 0,
-			speed: hp_slide_speed
+			speed: hp_slide_speed,
+			cleartypeNoBg: true
 		});
 		
 		$('#right_nav li').click(function(e){
 			var _o = $(this);
+			if (_o.hasClass('active')) return;
 			
 			// change background if any
 			var background = _o.attr('data-bg');
+
 			if (background) {
 				var img = $('<img src="'+background+'" class="main_image" />');
 				$(img).load(function() {
@@ -59,11 +62,13 @@ function initHPSlide(){
 			}
 			
 			// init #show_more_info click
-			$('#show_more_info').click(function(){
+			$('#show_more_info').click(function(e){
 				$(this).fadeOut('fast');
 				$('#site_footer').animate({
 					'bottom': '0'
 				}, 200);
+				
+				e.preventDefault();
 			});
 		});
 	}
@@ -85,7 +90,7 @@ function initModalbox(){
 	if (openmodalbox.length > 0) 
 	openmodalbox.modalBox({
 		setStylesOfFadingLayer:  {black : 'background-color:#000; filter:alpha(opacity=80); -moz-opacity:0.8; opacity:0.8;'},
-		setWidthOfModalLayer : 680,
+		setWidthOfModalLayer : 780,
 		minimalTopSpacing : -8,
 		callFunctionAfterShow : function(){
 			
