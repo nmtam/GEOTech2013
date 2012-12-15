@@ -32,6 +32,8 @@ function initHPSlide(){
 				$(img).load(function() {
 					$('#fullpage_image_holder .main_image').hide();
 					$('#fullpage_image_holder').append(img);
+					
+					initFullpageBackground();
 				});
 			} else {
 				$('#fullpage_image_holder .main_image').hide();
@@ -49,7 +51,7 @@ function initHPSlide(){
 			if (index > 0) { 
 				// hide footer
 				$('#site_footer').animate({
-					'bottom': '-100px'
+					'bottom': '-90px'
 				}, 200);
 				// show show_more_info button
 				$('#show_more_info').fadeIn();
@@ -106,6 +108,15 @@ function initJSPanel(){
 			verticalDragMaxHeight: 150,
 			verticalGutter: 0
 		});
+		
+		setTimeout(function(){
+			var _o = $('.jspTrack');
+			var h = _o.height();
+			_o.css({
+				'height': parseInt(h-2)+'px',
+				'margin-top': '2px'
+			});
+		}, 200);
 	}
 }
 
