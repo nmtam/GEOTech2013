@@ -3,7 +3,9 @@ $(document).ready(function(){
 	initFullpageBackground();
 	initJSPanel();
 	initMap();
+	initModalbox();
 });
+
 
 function initMap(){
 	$('#map').hover(
@@ -14,6 +16,17 @@ function initMap(){
 			$('a', this).hide();
 		}
 	);
+}
+
+function initModalbox(){
+	jQuery(".openmodalbox").modalBox({
+		setStylesOfFadingLayer:  {black : 'background-color:#000; filter:alpha(opacity=80); -moz-opacity:0.8; opacity:0.8;'},
+		setWidthOfModalLayer : 680,
+		minimalTopSpacing : -8,
+		callFunctionAfterShow : function(){
+			
+		}
+	});
 }
 
 function initJSPanel(){

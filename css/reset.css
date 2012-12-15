@@ -30,13 +30,9 @@ q:before,q:after {
 abbr,acronym { border:0;
 }
 
-table tr:nth-child(even) {
-    background: rgba(0,0,0,0.1);
-}
-
 .fe IMG{border:none}
-.fe A{text-decoration:none; color:#004a80; outline:none;}
-.fe A:hover{text-decoration:none; color:#ce171f;}
+.fe A{text-decoration:none; color:#2b388f; outline:none;}
+.fe A:hover, .fe A.active{text-decoration:none; color:#ef5a28;}
 .fe UL{list-style-type:none}
 .fe TD{padding:0; vertical-align:top;}
 .fe P{line-height:130%; padding:3px 0 5px 0;}

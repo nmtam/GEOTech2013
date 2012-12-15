@@ -1,0 +1,41 @@
+<section class="popup_wrapper">
+    <h3 class="popup_title font_ubuntu"><span>Conference Program</span></h3>
+    
+    <div class="popup_content">
+        <ul class="font_ubuntu program_select clearfix">
+        	<li><a href="#" class="active" rel="day_1">Day 01</a></li>
+            <li><a href="#" rel="day_2">Day 02</a></li>
+            <li><a href="#">Download Program</a></li>
+        </ul>
+        
+        <div id="day_1" class="program_content font_ubuntu">
+        	<h3>THURDAY, DECEMBER 28th, 2013</h3>
+            <img src="../userfiles/program-day1.gif" alt="" width="522" height="1062" />
+        </div>
+        <div id="day_2" style="display:none" class="program_content font_ubuntu">
+        	<h3>FRIDAY, DECEMBER 29th, 2013</h3>
+            <img src="../userfiles/program-day2.gif" alt="" width="522" height="1062" />
+        </div>
+    </div>
+    
+    <script>
+	$(document).ready(function(){		
+		$('.program_select li').click(function(e){
+			var _a = $('> a', this);
+			if (_a.attr('rel')) {
+				// hide current program
+				$('.popup_content .program_content').hide();
+				$('.program_select a').removeClass('active');
+				
+				// show selected program
+				_a.addClass('active');
+				$('#'+_a.attr('rel')).show();
+			} else { 
+				// user download program
+				// do nothing
+			}
+		});
+	});
+
+	</script>
+</section>
