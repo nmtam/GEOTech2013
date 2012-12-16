@@ -35,9 +35,9 @@
 	float:left;
 }
 .fe #top_navigator .online_register {
-	width:170px; height:29px; text-align:center;
+	width:170px; height:29px; text-align:center; margin-right:10px;
 	background:url(imgs/call_to_action_bg.gif) repeat-x;
-	font-size:12px; font-weight:bold; line-height:29px; color:#ffe3b8;
+	font-size:12px; line-height:29px; color:#ffe3b8;
 	text-transform:uppercase;
 	
 	-webkit-border-radius: 5px;
@@ -45,12 +45,61 @@
 	-webkit-box-shadow:  0px 1px 2px 0px #ffe3b8;	
 	box-shadow:  0px 1px 2px 0px #ffe3b8;
 }
+.fe .online_register_preload,
+.fe #top_navigator .online_register:hover{
+	background:url(imgs/call_to_action_bg_hover.gif) repeat-x;
+	color:#fff;
+}
 
-.fe #top_navigator li{margin:0 0 0 20px;}
+.fe #top_navigator li{position:relative;}
 .fe #top_navigator li a{
 	color:#252160; font-size:14px; line-height:29px;
 	text-transform:uppercase;
+	float:left; padding:0 12px;
 }
+
+.fe #top_navigator > ul > li > a.active {
+	border-bottom:1px solid #0d004c;
+}
+.fe #top_navigator > ul > li > span{
+	position:absolute; top:28px; left:50%;
+	margin:0 0 0 -7.5px;
+	background:url(imgs/sprite.png) no-repeat -790px 0;
+	width:15px; height:9px;
+	display:none;
+}
+.fe #top_navigator > ul > li > a:hover,
+.fe #top_navigator > ul > li.hover > a,
+.fe #top_navigator > ul > li > a.active{
+	background-color:#252160; color:#fff;
+}
+
+.fe #top_navigator li ul{
+	position:absolute; display:none;
+	top:29px; left:0; z-index:99;
+	padding-bottom:10px; background-color:#2b388f;
+}
+.fe #top_navigator li:hover ul {display:block;}
+.fe #top_navigator li ul li{
+	float:none;
+}
+.fe #top_navigator li ul li:first-child{
+	padding-top:10px; background-color:#2b388f;
+}
+.fe #top_navigator li ul li a{
+	min-width:138px; text-transform:none; 
+	color:#c3996b; background-color:#2b388f;
+	padding-right:20px;
+	line-height:22px;
+}
+
+
+.fe #top_navigator li ul li a:hover,
+.fe #top_navigator li ul li a.active{
+	color:#fff;
+}
+
+
 /* end of top_navigator */
 
 /* main_content */
@@ -273,6 +322,10 @@
 	width:30px; height:30px; background-color:#ffe3b8;
 	font:bold 11px Arial; color:#dd0910;
 	line-height:30px; text-align:center;
+	display:block;
+}
+.fe .other_news li:hover span{
+	display:none;
 }
 /* end of news */
 
@@ -370,7 +423,7 @@
 	filter: dropshadow(color=#000101, offx=0, offy=1);
 }
 .fe .popup_content{
-	padding:20px 40px 40px 100px;
+	padding:20px 90px 40px 100px;
 	color:#363636;
 }
 .fe .popup_content h3{

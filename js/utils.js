@@ -5,10 +5,24 @@ $(document).ready(function(){
 	initJSPanel();
 	initMap();
 	initModalbox();
-	
+	initTopNavigator();
 	initHPSlide();
 	
 });
+
+function initTopNavigator(){
+	$('#top_navigator ul li ul').hover(
+		function(){
+			var _p = $(this).parents().get(0);
+			$(_p).addClass('hover');
+		}, 
+		function(){
+			var _p = $(this).parents().get(0);
+			$(_p).removeClass('hover');	
+		}
+	);
+	$('#top_navigator > ul > li > a.active').next().css('display', 'block');
+}
 
 function initHPSlide(){
 	var hp_slide = $('#hp_slideshow');
