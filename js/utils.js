@@ -57,14 +57,34 @@ function initTopNavigator(){
 function initHPSlide(){
 	var hp_slide = $('#hp_slideshow');
 	if (hp_slide.length == 1) {
+		var _li = $('#right_nav li');
+		
+		var index = 0, hash = window.location.hash;
+		if (hash) {
+			index = /\d+/.exec(hash)[0];
+			index = (parseInt(index) || 1) - 1; // slides are zero-based
+			
+			_li.removeClass('active');
+			$('#right_nav li:nth-child('+parseInt(index+1)+')').addClass('active');
+			
+			if (index > 0) {
+				_hideFooter();
+			} else {
+				_showFooter();
+			}
+		}
+	
+
 		hp_slide.cycle({
 			fx: 'scrollVert',
             timeout: 0,
 			speed: hp_slide_speed,
-			cleartypeNoBg: true
+			cleartypeNoBg: true,
+			startingSlide: index
 		});
 		
-		$('#right_nav li').click(function(e){
+		
+		_li.click(function(e){
 			var _o = $(this);
 			if (_o.hasClass('active')) return;
 			
@@ -92,45 +112,41 @@ function initHPSlide(){
 			_o.addClass('active');
 			
 			// show/hide footer
-			if (index > 0) { 
-				// hide footer
-				$('#site_footer').animate({
-					'bottom': '-90px'
-				}, 200);
-				// show show_more_info button
-				$('#show_more_info').fadeIn();
-				$('#show_less_info').fadeOut();
+			if (index > 0) {
+				_hideFooter();
 			} else {
-				$('#show_more_info').fadeOut('fast');
-				$('#show_less_info').fadeIn();
-				
-				$('#site_footer').animate({
-					'bottom': '0'
-				}, 200);
+				_showFooter();
 			}
 		});
 	}
 }
-
+function _hideFooter(){
+	$('#show_more_info').show();
+	$('#show_less_info').hide();
+	
+	$('#site_footer').animate({
+		'bottom': '-90px'
+	}, 200);
+}
+function _showFooter(){
+	$('#show_more_info').hide();
+	$('#show_less_info').show();
+	
+	$('#site_footer').animate({
+		'bottom': '0'
+	}, 200);
+}
 function initFooter(){
 	// init #show_more_info click
 	$('#show_more_info').click(function(e){
-		$(this).fadeOut('fast');
-		$('#site_footer').animate({
-			'bottom': '0'
-		}, 200);
-		$('#show_less_info').fadeIn();
+		_showFooter();
 		
 		e.preventDefault();
 	});
 	
 	// init #show_more_info click
 	$('#show_less_info').click(function(e){
-		$(this).fadeOut('fast');
-		$('#site_footer').animate({
-			'bottom': '-90px'
-		}, 200);
-		$('#show_more_info').fadeIn();
+		_hideFooter();
 		
 		e.preventDefault();
 	});

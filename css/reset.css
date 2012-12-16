@@ -81,3 +81,7 @@ abbr,acronym { border:0;
 .clearfix {
     *zoom: 1;
 }
+
+.clearfloat{
+	clear:both; height:0; line-height:0; font-size:0;
+}
