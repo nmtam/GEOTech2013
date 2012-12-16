@@ -21,27 +21,40 @@
     <div id="site_wrapper">
 	    <nav id="top_navigator" class="clearfix">
         	<a href="#" class="online_register font_ubuntu">Registration online</a> 
-            <span class="online_register_preload hidden"></span>
+            <span class="online_register_preload"></span>
+            <div id="online_register_wrapper" class="font_ubuntu">
+            	<div class="deco"><span></span></div>
+
+                <a href="#" class="submit_paper"><span></span>Paper Submission</a>
+                <div class="seperator"><span></span></div>
+                <a href="#" class="register"><span></span>Register to Attend</a>
+            </div>
+
+
             <ul class="font_ubuntu">
             	<li>
                 	<a href="#">About</a> <span></span>
                     <ul>
-                    	<li><a href="#">GEOTEC</a></li>
-                        <li><a href="#">FECON</a></li>
+                    	<li><a href="#">GEOTEC HANOI</a></li>
+                        <li><a href="#">Organisers</a></li>
                         <li><a href="#">Hotels</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Press</a> <span></span></li>
                 <li><a href="#">Gallery</a> <span></span></li>
                 <li>
-                	<a href="#" class="active">Excursion</a> <span></span>
+                	<a href="#">Excursion</a> <span></span>
                     <ul>
                     	<li><a href="#">Hanoi Capital</a></li>
                         <li><a href="#">Conference Excursions</a></li>
-                        <li><a href="#">Others</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Sponsorship & Exhibition</a> <span></span></li>
+                <li><a href="#">Sponsorships & Exhibitions</a> <span></span>
+                	<ul>
+                    	<li><a href="#">Sponsorships</a></li>
+                        <li><a href="#">Exhibitions</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">Contact</a> <span></span></li>
             </ul>
         </nav>
@@ -70,13 +83,14 @@
             
             <div class="main_content">
                 <h1 class="page_title font_ubuntu">News</h1>
-                <ul class="follow_us">
+                <ul class="follow_us font_ubuntu">
+                	<li class="title"><span>Connect Us on </span></li>
                     <li class="facebook"><a href="#" class="hide_content" title="Follow us on Facebook">Facebook</a></li>
                     <li class="twitter"><a href="#" class="hide_content" title="Follow us on Twitter">Twitter</a></li>
                     <li class="youtube"><a href="#" class="hide_content" title="Follow us on Youtube">Youtube</a></li>
                 </ul>
                 
-                <div class="jsp other_news">
+                <div class="other_news">
                     <ul class="font_ubuntu">
                         <li><a href="#">Nunc dignissim risus id metus</a><span>New</span></li>
                         <li><a href="#">Vestibulum commodo felis quis tortor</a><span>New</span></li>
@@ -91,10 +105,16 @@
                 
                 <article id="latest_news">
                     <img src="userfiles/news.jpg" alt="" width="100%" />
-                    <h2><a href="#">Lorem ipsum dolor sit amet, consectetueradipiscing elit</a></h2>
+                    <h2><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</a></h2>
                     <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus...</p>
-                </article>
+                    
+                    <span class="view_detail"><a href="#">View Detail</a></span>                </article>
                 
+                <ul class="video_listing font_ubuntu">
+                	<li><a href="#" class="openmodalbox">Introduction to Geotechnical Engineering for the CGEA<input type="hidden" name="ajaxhref" value="_popup/video.html" /></a></li>
+                    <li><a href="#" class="openmodalbox">Soil Strength Example<input type="hidden" name="ajaxhref" value="_popup/video2.html" /></a></li>
+                    <li><a href="#" class="openmodalbox">Introduction about GEOTEC HANOI 2013<input type="hidden" name="ajaxhref" value="_popup/video3.html" /></a></li>
+                </ul>
                 
             </div>
             
@@ -138,7 +158,7 @@
                             <span class="second long">JAN-MAY</span>
                         </div>
                         <div class="info">
-                            <h3 class="font_ubuntu">December 15, 2012</h3>
+                            <h3 class="font_ubuntu">Jan — May 15, 2013</h3>
                             Early registration
                         </div>
                     </div>
@@ -148,28 +168,28 @@
                             <span class="second">MAY</span>
                         </div>
                         <div class="info">
-                            <h3 class="font_ubuntu">December 15, 2012</h3>
-                            Deadline for submitting(accepted) paper manuscripts
+                            <h3 class="font_ubuntu">May 1, 2013</h3>
+                            Notification of accepted abstracts
                         </div>
                     </div>
                     <div class="items">
                         <div class="calendar font_ubuntu">
                             <span>15</span>
-                            <span class="second long">JAN-MAY</span>
+                            <span class="second long">MAY-NOV</span>
                         </div>
                         <div class="info">
-                            <h3 class="font_ubuntu">December 15, 2012</h3>
-                            Early registration
+                            <h3 class="font_ubuntu">May — Nov 15, 2013</h3>
+                            Normal registration
                         </div>
                     </div>
                     <div class="items">
                         <div class="calendar font_ubuntu">
                             <span>1</span>
-                            <span class="second">MAY</span>
+                            <span class="second">AUG</span>
                         </div>
                         <div class="info">
-                            <h3 class="font_ubuntu">December 15, 2012</h3>
-                            Deadline for submitting(accepted) paper manuscripts
+                            <h3 class="font_ubuntu">August 1, 2013</h3>
+                            Deadline for submitting<br>(accepted) paper manuscripts
                         </div>
                     </div>
                     
@@ -229,8 +249,10 @@
             </section>
             
             <section id="copyright"><a href="#">TIẾNG VIỆT</a><span> | FECON &copy; 2012 - Designed by </span><a href="http://duknguyen.com/" target="_blank">Duknguyen Team</a></section>
-            <a href="#" id="show_more_info" class="font_ubuntu">Show more info</a>        </div>
-</footer>
+            <a href="#" id="show_more_info" class="font_ubuntu">Show more info</a>
+            <a href="#" id="show_less_info" class="hide_content">Show less info</a>
+        </div>
+    </footer>
     
     <script src="js/jquery.js"></script>
     

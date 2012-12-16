@@ -37,6 +37,9 @@ div#modalBox div#modalBoxBody div#modalBoxCloseButton a.closeModalBox {
 	height:30px;
 	background:url(../../../css/imgs/x.png) no-repeat;
 }
+div#modalBox div#modalBoxBody div#modalBoxCloseButton a.closeModalBox:hover{
+	background-position:0 -30px;
+}
 div#modalBox div#modalBoxBody div#modalBoxCloseButton a.closeModalBox span {
 	display:none;
 }

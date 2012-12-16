@@ -45,6 +45,7 @@ div#modalBoxAjaxLoader {
 	text-align:center; 
 	overflow:hidden;
 	color:#c3996b;
+	font-family: 'Ubuntu', sans-serif; letter-spacing:-0.5px;
 }
 div#modalBox {
 	display:none; 
