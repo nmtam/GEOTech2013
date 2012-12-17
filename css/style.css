@@ -233,10 +233,13 @@
 #right_nav ul li.main_menu span{background-position: 0 -124px;}
 #right_nav ul li.news span{background-position: -41px -124px;}
 #right_nav ul li.imp_date span{background-position: -82px -124px;}
-#right_nav ul li.venue span{background-position: -123px -124px;}
+#right_nav ul li.venue span{background-position: -123px -124px; margin-bottom:4px;}
 #right_nav ul li a{
 	text-transform:uppercase; color:#ffe3b8;
 	font-size:10px; font-weight:bold;
+}
+#right_nav ul li a small{
+	font-size:10px;
 }
 /* end of right_col */
 
@@ -415,8 +418,8 @@
 .fe .main_content .video_listing {float:right; width:363px;}
 .fe .main_content .video_listing li{
 	background:url(imgs/video_icon.png) no-repeat left center;
-	padding-left:24px;
-	margin:10px 0 0 0;
+	padding:0 0 4px 24px;
+	margin:7px 0 0 0;
 }
 .fe .main_content .video_listing li a{
 	font-size:12px; line-height:12px;
@@ -571,6 +574,11 @@
 	color:#363636;
 	margin-top:10px;
 }
+.fe .popup_content .news_title{
+	color:#363636;
+	font:normal 32px 'Ubuntu', sans-serif; letter-spacing:-2px;
+	margin:23px 0 15px 0;
+} 
 /* popup */
 
 /* about */

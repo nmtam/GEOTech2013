@@ -11,9 +11,19 @@ $(document).ready(function(){
 	initHPSlide();
 	
 	addOnLoadEvent(function(){
-
+		showRequestedPopup();
 	});
 });
+
+function showRequestedPopup(){
+	var hash = window.location.hash;
+	var url = hash.split('-');
+
+	console.log(url);
+	
+	var a = $('a[href$='+url+']');
+	if (a.length == 1) a.trigger('click');
+}
 
 function initTopNavigator(){
 	$('#top_navigator ul li ul').hover(
