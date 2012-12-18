@@ -7,22 +7,31 @@ $(document).ready(function(){
 	initModalbox();
 	initTopNavigator();
 	initFooter();
-	
 	initHPSlide();
 	
 	addOnLoadEvent(function(){
 		showRequestedPopup();
+		initBackToTop();
 	});
 });
+
+function initBackToTop(){
+	$('.back_to_top').click(function () {
+		$('body,html').animate({
+			scrollTop: 0
+		}, 400);
+		return false;
+	});
+}
 
 function showRequestedPopup(){
 	var hash = window.location.hash;
 	var url = hash.split('-');
 
-	console.log(url);
-	
+	//console.log(url);
+	url = url[1];
 	var a = $('a[href$='+url+']');
-	if (a.length == 1) a.trigger('click');
+	if (a.length > 0) a.trigger('click');
 }
 
 function initTopNavigator(){

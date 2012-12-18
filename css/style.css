@@ -15,7 +15,7 @@
 }
 .fe #hp_slideshow{
 	width:765px;
-	height:485px;
+	height:500px;
 	overflow:hidden;
 	background:none;
 }
@@ -152,7 +152,7 @@
 
 /* main_content */
 .fe .main_content{
-	width:765px; height:470px; overflow:hidden;
+	width:765px; height:500px; overflow:hidden;
 	position:relative;
 	margin:15px 0 0 0;
 }
@@ -193,6 +193,18 @@
 #main_article ul li a:hover{
 	background:none; background-color:#fff;
 	color:#2b388f;
+}
+.fe .main_content .attendees_support{
+	background:url(imgs/white_20.png);
+	display:block; margin:10px 0; padding:0 0 0 10px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	color:#ffe3b8;
+	font:14px/28px 'Ubuntu', sans-serif; height:28px;
+}
+.fe .main_content .attendees_support:hover{
+	color:#2b388f;
+	background:none; background-color:#fff;
 }
 /* end of main_content */
 
@@ -237,9 +249,6 @@
 #right_nav ul li a{
 	text-transform:uppercase; color:#ffe3b8;
 	font-size:10px; font-weight:bold;
-}
-#right_nav ul li a small{
-	font-size:10px;
 }
 /* end of right_col */
 
@@ -477,20 +486,26 @@
 
 /* Venue */
 .fe .sub_page_title{
-	margin:3px 0 0 20px;
-	font-size:12px; color:#fff;
+	font-size:12px; 
+	letter-spacing:0;
 }
 .fe .sub_page_title a{
-	display:block; margin:7px 0 6px 0;
-	width:195px; height:27px;
-	background:url(imgs/sprite.png) no-repeat -805px -217px;
+	float:left; margin:43px 0 0 15px;
+	color:#ffe3b8;
 }
+.fe .sub_page_title a:hover{color:#fff;}
 .fe #map{
 	position:relative;
 	margin:25px 0 0 0;
 }
+.fe #map img{
+	-webkit-border-radius: 5px;
+    border-radius: 5px;
+	-webkit-box-shadow:  0px 1px 0px 1px rgba(0, 1, 1, 0.1);
+	box-shadow:  0px 1px 0px 1px rgba(0, 1, 1, 0.1);
+}
 .fe #map a{
-	display:none; width:450px; height:350px; padding:0; margin:0;
+	display:none; width:450px; height:320px; padding:0; margin:0;
 	position:absolute; z-index:2; top:0; left:0;
 	font-size:24px; color:#2b388f;
 	line-height:352px;
@@ -502,7 +517,7 @@
     border-radius: 5px;
 }
 .fe #map a span{
-	position:absolute; top:145px; left:245px;
+	position:absolute; top:135px; left:245px;
 	width:51px; height:62px; z-index:3;
 	background:url(imgs/sprite.png) no-repeat -805px 0;
 }
@@ -578,7 +593,49 @@
 	color:#363636;
 	font:normal 32px 'Ubuntu', sans-serif; letter-spacing:-2px;
 	margin:23px 0 15px 0;
+}
+
+.fe .share_online_wrapper{
+	margin:35px 0;
+}
+.fe .share_online *{
+	float:left; margin:0 7px 0 0;
 } 
+.fe .share_online a{
+	width:23px; height:23px; margin:0;
+	background:url(imgs/sprite.png) no-repeat;
+}
+.fe .share_online .linkedin{background-position:0 0;}
+.fe .share_online .linkedin:hover{background-position:0 -23px;}
+.fe .share_online .twitter{background-position:-23px 0;}
+.fe .share_online .twitter:hover{background-position:-23px -23px;}
+.fe .share_online .facebook{background-position:-46px 0;}
+.fe .share_online .facebook:hover{background-position:-46px -23px;}
+.fe .share_online .email{background-position:-69px 0;}
+.fe .share_online .email:hover{background-position:-69px -23px;}
+
+.fe .popup_content .back_to_top{
+	float:right; padding-left:24px;
+	height:23px;
+	font:bold 12px/23px 'Ubuntu', sans-serif; text-transform:uppercase;
+	letter-spacing:-0.5px;
+}
+.fe .popup_content .back_to_top span{
+	float:left; width:23px; height:23px;
+	background: url(imgs/sprite.png) no-repeat -93px 0;
+}
+.fe .popup_content .back_to_top:hover span{background-position:-93px -23px;}
+
+.fe .share_online_wrapper > span{
+	font-size:11px; 
+	font-style:italic;
+}
+.fe .share_online_wrapper > span strong{color:#EF5A28;}
+.fe .popup_content .speakers{
+	border:3px solid #fff;
+	-webkit-box-shadow:  0px 1px 0px 1px rgba(0, 1, 1, 0.1);
+	box-shadow:  0px 1px 0px 1px rgba(0, 1, 1, 0.1);
+}
 /* popup */
 
 /* about */
@@ -631,3 +688,31 @@
 	color:#FFE3B8;
 }
 /* end of about */
+
+/* attendees support*/
+.fe .hotel_category{
+	border-top:1px solid #ef5a28;
+	margin:16px 0 50px 0; padding:5px 0 0 0;
+}
+.fe .hotel_category .items{position:relative;}
+.fe .hotel_category .star{
+	width:24px; height:21px; float:left;
+	background:url(imgs/sprite.png) no-repeat -766px -23px;
+}
+.fe .article_content .hotel_category h3.hotel_title{
+	text-transform:uppercase;
+	font:bold 16px/16px "Times New Roman", Times, serif;
+	margin-top:25px;
+}
+.fe .hotel_category .meta{
+	font-size:14px;
+}
+.fe .hotel_category .items .hotel_logo{
+	position:absolute; top:0; left:-130px;
+	
+	-webkit-border-radius: 3px;
+    border-radius: 3px;
+	-webkit-box-shadow:  0px 1px 0px 1px rgba(0, 1, 1, 0.1);
+	box-shadow:  0px 1px 0px 1px rgba(0, 1, 1, 0.1);
+}
+/* end of attendees support*/
