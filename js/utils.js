@@ -9,11 +9,32 @@ $(document).ready(function(){
 	initFooter();
 	initHPSlide();
 	
+	initFancybox();
+	
 	addOnLoadEvent(function(){
 		showRequestedPopup();
 		initBackToTop();
 	});
 });
+
+function initFancybox(){
+	var fancy = $('.fancy');
+	if (fancy.length > 0) {
+		fancy.fancybox({
+			'transitionIn'	: 'elastic',
+			'transitionOut'	: 'elastic',
+			'speedIn'		: 400, 
+			'speedOut'		: 200, 
+			'titlePosition' : 'inside',
+			'padding'		: 0,
+			'margin'		: 100,
+			'cyclic'		: true,
+			'centerOnScroll': true,
+			'overlayOpacity': 0.8,
+			'overlayColor'	: '#000'
+		});
+	}
+}
 
 function initBackToTop(){
 	$('.back_to_top').click(function () {
