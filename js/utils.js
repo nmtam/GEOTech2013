@@ -10,12 +10,30 @@ $(document).ready(function(){
 	initHPSlide();
 	
 	initFancybox();
+	initExpandOrganiser();
 	
 	addOnLoadEvent(function(){
 		showRequestedPopup();
 		initBackToTop();
 	});
 });
+
+function initExpandOrganiser(){
+	$('.expand').click(function(e){
+		$('.organiser_content_wrapper').css('height', '150px');
+		$('.organiser_content_wrapper .expand').show();
+		
+		var _parent = $(this).parents().get(1);
+		$(_parent).css('height', 'auto');
+		$(this).hide();
+		
+		$('html, body').animate({
+			scrollTop: $(_parent).offset().top
+		}, 300);
+		
+		e.preventDefault();
+	});
+}
 
 function initFancybox(){
 	var fancy = $('.fancy');

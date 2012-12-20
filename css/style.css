@@ -773,3 +773,21 @@
 	background-color:#ef5a28; color:#fff;
 }
 /* end of contact_content */
+
+.fe .article_content .group_title{
+	font:normal 18px/30px 'Ubuntu', sans-serif; text-transform:uppercase;
+	color:#707070;
+	margin:0 0 10px 0;
+}
+.fe .organiser_content_wrapper{
+	height:150px; overflow:hidden;
+}
+.fe .orgainser_category .items{
+	margin:10px 0 40px 0;
+}
+.fe .orgainser_category .items .hotel_logo{
+	top:8px;
+}
+.fe .expand{
+	margin:0 0 0 5px;
+}
