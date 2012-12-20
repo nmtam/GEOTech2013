@@ -20,11 +20,11 @@ $(document).ready(function(){
 
 function initExpandOrganiser(){
 	$('.expand').click(function(e){
-		$('.organiser_content_wrapper').css('height', '150px');
+		$('.organiser_content_wrapper .hidden').css('display', 'none');
 		$('.organiser_content_wrapper .expand').show();
 		
 		var _parent = $(this).parents().get(1);
-		$(_parent).css('height', 'auto');
+		$('.hidden', _parent).css('display', 'block');
 		$(this).hide();
 		
 		$('html, body').animate({
