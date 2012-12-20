@@ -1092,6 +1092,8 @@
 
 			$('<iframe id="fancybox-hide-sel-frame" src="' + (/^https/i.test(window.location.href || '') ? 'javascript:void(false)' : 'about:blank' ) + '" scrolling="no" border="0" frameborder="0" tabindex="-1"></iframe>').prependTo(outer);
 		}
+		
+		console.log(wrap.css('top'));
 	};
 
 	$.fn.fancybox.defaults = {

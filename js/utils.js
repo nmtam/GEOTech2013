@@ -31,9 +31,13 @@ function initFancybox(){
 			'cyclic'		: true,
 			'centerOnScroll': true,
 			'overlayOpacity': 0.8,
-			'overlayColor'	: '#000'
+			'overlayColor'	: '#000',
+			'titleFormat'	: _fancyFormatTitle
 		});
 	}
+}
+function _fancyFormatTitle(title, currentArray, currentIndex, currentOpts){
+	return '<span id="counting-title">'+(currentIndex + 1)+'/'+currentArray.length+'</span>' + title;
 }
 
 function initBackToTop(){

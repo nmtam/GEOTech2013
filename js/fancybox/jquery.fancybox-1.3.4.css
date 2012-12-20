@@ -176,12 +176,12 @@
 }
 
 #fancybox-left:hover span {
-	left: 20px;
+	left: 0px;
 }
 
 #fancybox-right:hover span {
 	left: auto;
-	right: 20px;
+	right: 0px;
 }
 
 .fancybox-bg {
@@ -264,7 +264,6 @@
 	text-align: left;
 	font:normal 14px 'Ubuntu', sans-serif; color:#363636;
 	background: #ffe3b8;
-	position: relative;
 }
 
 .fancybox-title-outside {
@@ -357,3 +356,9 @@
 .fancybox-ie #fancybox-bg-sw { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_shadow_sw.png', sizingMethod='scale'); }
 .fancybox-ie #fancybox-bg-w { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_shadow_w.png', sizingMethod='scale'); }
 .fancybox-ie #fancybox-bg-nw { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_shadow_nw.png', sizingMethod='scale'); }
+
+.fe #counting-title{
+	position:absolute; top:17px; right:52px; z-index:1200;
+	color:#ffe3b8;
+	font:14px 'Ubuntu', sans-serif;
+}
