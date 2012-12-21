@@ -1,0 +1,167 @@
+<?php
+
+/**
+ * Implementation of hook_nodeapi().
+ */
+function nmtam_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL)
+{
+	switch ($op)
+	{
+		case 'delete':
+			drupal_goto('admin/content/node');
+		break;
+	}
+}
+/**
+ * Implementation of hook_menu().
+ */
+function nmtam_menu()
+{
+	$menus['not-found'] = array(
+		'title' => t('Page not found'),
+		'access arguments' => array('access content')
+	);
+	$menus['home'] = array(
+		'title' => t('Welcome to SURI Studio'),
+		'page callback' => 'homepage_content',
+		'access arguments' => array('access content'),
+		'file' => 'nmtam.funcs.php'
+	);
+	$menus['about'] = array(
+		'title' => t('About SURI'),
+		'page callback' => 'about_content',
+		'access arguments' => array('access content'),
+		'file' => 'nmtam.funcs.php'
+	);
+	$menus['gallery'] = array(
+		'title' => t('SURI Gallery'),
+		'page callback' => 'gallery_content',
+		'access arguments' => array('access content'),
+		'file' => 'nmtam.funcs.php'
+	);
+	$menus['events'] = array(
+		'title' => t('Events'),
+		'page callback' => 'events_content',
+		'access arguments' => array('access content'),
+		'file' => 'nmtam.funcs.php'
+	);
+	$menus['events/%'] = array(
+		'title' => t('Events'),
+		'page callback' => 'events_content',
+		'page arguments' => array(1),
+		'access arguments' => array('access content'),
+		'file' => 'nmtam.funcs.php'
+	);
+	$menus['services'] = array(
+		'title' => t('Services'),
+		'page callback' => 'services_content',
+		'access arguments' => array('access content'),
+		'file' => 'nmtam.funcs.php'
+	);
+	$menus['services/%'] = array(
+		'title' => t('Services'),
+		'page callback' => 'services_content',
+		'access arguments' => array('access content'),
+		'page arguments' => array(1),
+		'file' => 'nmtam.funcs.php'
+	);
+	$menus['contact'] = array(
+		'title' => t('Contact us'),
+		'page callback' => 'contact_content',
+		'access arguments' => array('access content'),
+		'file' => 'nmtam.funcs.php'
+	);
+	
+	foreach ($menus as &$item) $item['type'] = MENU_CALLBACK;
+	return $menus;
+}
+
+/**
+ * Implementation of hook_theme().
+ */
+function nmtam_theme()
+{
+	$theme['homepage_content'] = array(
+		'template' => 'templates/homepage_content',
+		'arguments' => array(
+			'v' => null
+		)
+	);
+	$theme['left_nav'] = array(
+		'template' => 'templates/blocks/left_nav',
+		'arguments' => array(
+			'v' => null
+		)
+	);
+	$theme['site_meta'] = array(
+		'template' => 'templates/blocks/site_meta',
+		'arguments' => array(
+			'v' => null
+		)
+	);
+	$theme['about_content'] = array(
+		'template' => 'templates/about_content',
+		'arguments' => array(
+			'v' => null
+		)
+	);
+	$theme['gallery_content'] = array(
+		'template' => 'templates/gallery_content',
+		'arguments' => array(
+			'v' => null
+		)
+	);
+	$theme['taxonomy_term_page'] = array( // overide system taxonomy theme
+		'template' => 'templates/taxonomy_term_page',
+		'arguments' => array(
+			'tids' => null
+		)
+	);
+	$theme['events_content'] = array(
+		'template' => 'templates/events_content',
+		'arguments' => array(
+			'v' => null
+		)
+	);
+	$theme['services_content'] = array(
+		'template' => 'templates/services_content',
+		'arguments' => array(
+			'tids' => null
+		)
+	);
+	$theme['contact_content'] = array(
+		'template' => 'templates/contact_content',
+		'arguments' => array(
+			'v' => null
+		)
+	);
+	
+	
+	return $theme;
+}
+
+
+// gia block
+function nmtam_safemode() 
+{
+	$safemode = __get_param('safemode', '');
+	if (!empty($safemode)) {
+		variable_set('site_frontpage', 'node');
+		variable_set('site_offline', '1');	
+		drupal_flush_all_caches();
+	}
+}
+
+function nmtam_left_nav($active='')
+{
+	include_once('nmtam.block.php');
+	return _nmtam_left_nav($active);
+}
+function nmtam_meta()
+{
+	include_once('nmtam.block.php');
+	return _nmtam_meta();
+}
+
+
+?>
