@@ -1,5 +1,6 @@
 .fe{
-	font:normal 16px "Times New Roman", Times, serif;
+	font:normal 14px Arial, "Times New Roman", Times, serif;
+	line-height:140%; text-align:justify;
 	color:#111;
 	background-color:#f9a749;
 }
@@ -211,6 +212,7 @@
 /* right_col */
 .fe #right_col{
 	position:absolute; top:0; right:0; z-index:2;
+	width:144px;
 }
 .fe #logo {
 	width:144px; height:217px; display:block;
@@ -544,7 +546,7 @@
 	color:#363636;
 }
 .fe .popup_content h3{
-	font:bold 22px "Times New Roman"; line-height:18px;
+	font:bold 22px Arial, "Times New Roman"; line-height:18px;
 	padding:0; margin:16px 0 0 0;
 }
 .fe .popup_content ol{
@@ -660,7 +662,7 @@
 }
 
 .fe .inside_content .article_content h3{
-	font:bold 22px/18px "Times New Roman";
+	font:bold 22px/18px Arial, "Times New Roman";
 	margin:16px 0 0 0; padding:0;
 }
 
@@ -702,7 +704,7 @@
 }
 .fe .article_content .hotel_category h3.hotel_title{
 	text-transform:uppercase;
-	font:bold 16px/16px "Times New Roman", Times, serif;
+	font:bold 16px/16px Arial, "Times New Roman", Times, serif;
 	margin-top:25px;
 }
 .fe .hotel_category .meta{
