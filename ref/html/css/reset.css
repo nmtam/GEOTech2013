@@ -35,7 +35,7 @@ abbr,acronym { border:0;
 .fe A:hover, .fe A.active{text-decoration:none; color:#ef5a28;}
 .fe UL{list-style-type:none}
 .fe TD{padding:0; vertical-align:top;}
-.fe P{line-height:130%; padding:3px 0 9px 0;}
+.fe P{padding:3px 0 9px 0; line-height:140%; text-align:justify;}
 
 .fll{float:left}
 .flr{float:right}
